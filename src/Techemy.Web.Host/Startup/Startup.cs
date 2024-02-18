@@ -43,13 +43,14 @@ namespace Techemy.Web.Host.Startup
             //MVC
             services.AddControllersWithViews(
                 options => { options.Filters.Add(new AbpAutoValidateAntiforgeryTokenAttribute()); }
-            ).AddNewtonsoftJson(options =>
-            {
-                options.SerializerSettings.ContractResolver = new AbpMvcContractResolver(IocManager.Instance)
-                {
-                    NamingStrategy = new CamelCaseNamingStrategy()
-                };
-            });
+            );
+            //    .AddNewtonsoftJson(options =>
+            //{
+            //    options.SerializerSettings.ContractResolver = new AbpMvcContractResolver(IocManager.Instance)
+            //    {
+            //        NamingStrategy = new CamelCaseNamingStrategy()
+            //    };
+            //});
 
             IdentityRegistrar.Register(services);
             AuthConfigurer.Configure(services, _appConfiguration);

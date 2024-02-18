@@ -13,8 +13,6 @@ namespace Techemy.Events
     public class EventRegistration : CreationAuditedEntity, IMustHaveTenant
     {
         public int TenantId { get; set; }
-
-        [ForeignKey("EventId")]
         public virtual Event Event { get; protected set; }
         public virtual Guid EventId { get; protected set; }
 
