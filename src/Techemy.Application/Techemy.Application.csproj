@@ -14,4 +14,12 @@
   <ItemGroup>
     <ProjectReference Include="..\Techemy.Core\Techemy.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Events\" />
+    <None Remove="Events\Dto\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Events\" />
+    <Folder Include="Events\Dto\" />
+  </ItemGroup>
 </Project>
