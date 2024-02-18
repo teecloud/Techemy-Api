@@ -5,6 +5,8 @@ using Abp.UI;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Techemy.Authorization.Users;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Techemy.Events
 {
